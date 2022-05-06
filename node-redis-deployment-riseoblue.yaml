@@ -5,7 +5,7 @@ metadata:
   labels:
     app: node-redis-riseoblue
 spec:
-  replicas: 1
+  replicas: 4
   selector:
     matchLabels:
       app: node-redis-riseoblue
