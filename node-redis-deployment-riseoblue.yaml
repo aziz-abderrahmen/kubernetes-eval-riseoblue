@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-redis-riseoblue
+  labels:
+    app: node-redis-riseoblue
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: node-redis-riseoblue
+  template:
+    metadata:
+      labels:
+        app: node-redis-riseoblue
+    spec:
+      containers:
+      - name: node-redis-riseoblue
+        image: cloud.canister.io:5000/arhturescriou/node-redis 
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+        ports:
+        - containerPort: 8080
+        env:
+        - name: PORT
+          value: "6379"
+        - name: REDIS_URL
+          value: redis://10.3.169.69
+      imagePullSecrets:
+      - name: regcred
