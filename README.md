@@ -41,5 +41,5 @@ kubectl get pods pour afficher les pods sur le cluster
 kubectl logs node-redis-riseoblue-{HASH} pour verifier que le serveur node-redis a bien etabli la connexion avec redis 
 
 ### Vous devez avoir ce msg dans le terminal : 
-redis connected to redis://10.3.169.69
+redis connected to redis://10.3.169.69 <br/>
 listening at http://localhost:6379
