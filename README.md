@@ -7,12 +7,12 @@
  
 #### Pour deployer l'application, lancer la commande : 
 
-#### kubectl apply -t redis-deployment-riseoblue.yaml
+kubectl apply -t redis-deployment-riseoblue.yaml
 
 
 ### Pour deployer le service, lancer la commande : 
 
-#### kubectl apply -t redis-service-riseoblue.yaml
+kubectl apply -t redis-service-riseoblue.yaml
 
 
 
@@ -37,5 +37,9 @@ kubectl scale deployment node-redis-deployment --replicas=4
 ## Contexte 
 
 ### Tapez : 
+kubectl get pods pour afficher les pods sur le cluster 
+kubectl logs node-redis-riseoblue-{HASH} pour verifier que le serveur node-redis a bien etabli la connexion avec redis 
 
-kubectl logs {NOM_POD} pour verifier que tout fonctionne bien
+### Vous devez avoir ce msg dans le terminal : 
+redis connected to redis://10.3.169.69
+listening at http://localhost:6379
